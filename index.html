@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dhruti Gaudana | Data Analyst Portfolio</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="mediaqueries.css" />
+    <style>
+      /* ===== ANIMATIONS & EFFECTS ===== */
+      @keyframes fadeInUp {
+        0% {
+          opacity: 0;
+          transform: translateY(40px);
+        }
+        100% {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+
+      section {
+        opacity: 0;
+        animation: fadeInUp 1s ease forwards;
+      }
+
+      /* Delay each section for smoother entry */
+      #about { animation-delay: 0.2s; }
+      #experience { animation-delay: 0.4s; }
+      #projects { animation-delay: 0.6s; }
+      #contact { animation-delay: 0.8s; }
+
+      /* Hero text intro animation */
+      .section__text__p1,
+      .title,
+      .section__text__p2 {
+        opacity: 0;
+        transform: translateY(20px);
+        animation: fadeInUp 1.2s ease forwards;
+      }
+      .section__text__p1 { animation-delay: 0.2s; }
+      .title { animation-delay: 0.4s; }
+      .section__text__p2 { animation-delay: 0.6s; }
+
+      /* Floating social icons */
+      #socials-container .icon {
+        animation: float 3s ease-in-out infinite;
+      }
+      @keyframes float {
+        0%, 100% { transform: translateY(0); }
+        50% { transform: translateY(-6px); }
+      }
+
+      /* Hover glow on project cards */
+      .details-container.color-container {
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+      }
+      .details-container.color-container:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+      }
+
+      /* Buttons shimmer */
+      .btn {
+        position: relative;
+        overflow: hidden;
+        transition: all 0.3s ease;
+      }
+      .btn::after {
+        content: "";
+        position: absolute;
+        width: 0%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        background: rgba(255, 255, 255, 0.2);
+        transition: width 0.3s ease;
+      }
+      .btn:hover::after { width: 100%; }
+      .btn:hover { transform: translateY(-3px); }
+
+      /* Navbar underline hover */
+      .nav-links li a {
+        position: relative;
+        transition: color 0.3s ease;
+      }
+      .nav-links li a::after {
+        content: "";
+        position: absolute;
+        bottom: -5px;
+        left: 0;
+        width: 0%;
+        height: 2px;
+        background-color: #0077b6;
+        transition: width 0.3s ease;
+      }
+      .nav-links li a:hover::after { width: 100%; }
+      .nav-links li a:hover { color: #0077b6; }
+
+      /* Profile image hover */
+      .section__pic-container img {
+        transition: transform 0.4s ease, box-shadow 0.4s ease;
+      }
+      .section__pic-container img:hover {
+        transform: scale(1.05);
+        box-shadow: 0 0 15px rgba(0, 119, 182, 0.4);
+      }
+
+      /* Background gradient (subtle parallax effect) */
+      body {
+        background: linear-gradient(180deg, #f0f4ff 0%, #ffffff 100%);
+        background-attachment: fixed;
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- ===== NAVIGATION ===== -->
+    <nav id="desktop-nav">
+      <div class="logo">Dhruti Gaudana</div>
+      <div>
+        <ul class="nav-links">
+          <li><a href="#about">About</a></li>
+          <li><a href="#experience">Experience</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- ===== HAMBURGER NAV ===== -->
+    <nav id="hamburger-nav">
+      <div class="logo">Dhruti Gaudana</div>
+      <div class="hamburger-menu">
+        <div class="hamburger-icon" onclick="toggleMenu()">
+          <span></span><span></span><span></span>
+        </div>
+        <div class="menu-links">
+          <li><a href="#about" onclick="toggleMenu()">About</a></li>
+          <li><a href="#experience" onclick="toggleMenu()">Experience</a></li>
+          <li><a href="#projects" onclick="toggleMenu()">Projects</a></li>
+          <li><a href="#contact" onclick="toggleMenu()">Contact</a></li>
+        </div>
+      </div>
+    </nav>
+
+    <!-- ===== PROFILE SECTION ===== -->
+    <section id="profile">
+      <div class="section__pic-container">
+        <img src="./assets/profile-pic.jpg" alt="Dhruti Gaudana profile picture" />
+      </div>
+      <div class="section__text">
+        <p class="section__text__p1">Hello, I'm</p>
+        <h1 class="title">Dhruti Gaudana</h1>
+        <p class="section__text__p2">Data Analyst | Data Engineer</p>
+        <div class="btn-container">
+          <button
+            class="btn btn-color-2"
+            onclick="window.open('./assets/Gaudana Dhruti - Data Analyst.pdf')"
+          >
+            Download Resume
+          </button>
+          <button class="btn btn-color-1" onclick="location.href='./#contact'">
+            Contact Info
+          </button>
+        </div>
+        <div id="socials-container">
+          <img src="./assets/linkedin.png" alt="LinkedIn" class="icon"
+            onclick="location.href='https://www.linkedin.com/in/dhruti-gaudana-474995360?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3BFpA8VyqXR%2Fqp7WYIDb0k2Q%3D%3D'" />
+          <img src="./assets/github.png" alt="GitHub" class="icon"
+            onclick="location.href='https://github.com/dhruti9'" />
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== ABOUT SECTION ===== -->
+<section id="about">
+  <p class="section__text__p1">Get To Know More</p>
+  <h1 class="title">About Me</h1>
+
+  <div class="about-wrapper">
+    <div class="about-highlights">
+      <div class="highlight-card">
+        <h3>Experience</h3>
+        <p>5+ years in Data Analytics & Software Development</p>
+      </div>
+      <div class="highlight-card">
+        <h3>Education</h3>
+        <p>M.Sc. Cybersecurity & Networks<br>B.Tech Computer Engineering</p>
+      </div>
+      <div class="highlight-card">
+        <h3>Expertise</h3>
+        <p>SQL | Python | Power BI | AWS | Tableau | ETL Automation | Azure</p>
+      </div>
+    </div>
+
+    <div class="about-text">
+      <p>
+        I’m a data-driven professional passionate about transforming raw data into 
+        actionable insights. My work bridges technical expertise and business understanding —
+        whether it's optimizing ETL pipelines, building dynamic dashboards, or uncovering trends
+        through predictive analytics.
+      </p>
+      <p>
+        I believe data is most powerful when it tells a clear story — one that guides smarter 
+        decisions. I thrive at the intersection of analytics, automation, and innovation.
+      </p>
+    </div>
+  </div>
+
+  <img src="./assets/arrow.png" alt="Arrow" class="icon arrow"
+    onclick="location.href='./#experience'" />
+</section>
+
+    <!-- ===== EXPERIENCE SECTION ===== -->
+    <section id="experience">
+      <p class="section__text__p1">Explore My</p>
+      <h1 class="title">Experience</h1>
+      <div class="experience-details-container">
+        <div class="about-containers">
+          <div class="details-container">
+            <h2 class="experience-sub-title">United Health Group | Developer & Analyst</h2>
+            <p class="date-range">Sep 2024 - Present | United States</p>
+            <ul>
+              <li>Automated Python-based data pipelines, improving data quality by 20%.</li>
+              <li>Developed Tableau dashboards for 300+ stakeholders.</li>
+              <li>Optimized SQL ETL processes to enhance performance.</li>
+              <li>Built ML models to boost marketing ROI by 13%.</li>
+            </ul>
+          </div>
+          <div class="details-container">
+            <h2 class="experience-sub-title">Brain Byte Infotech | Software Developer</h2>
+            <p class="date-range">Jun 2019 - Jun 2022 | Surat, India</p>
+            <ul>
+              <li>Created REST APIs & web interfaces using Django, JSP, JS.</li>
+              <li>Cut response time by 15% via optimization and debugging.</li>
+              <li>Led migration from REST to GraphQL improving maintainability.</li>
+            </ul>
+          </div>
+          <div class="details-container">
+            <h2 class="experience-sub-title">Easy Laser Tech | DB Intern</h2>
+            <p class="date-range">Aug 2018 - Mar 2019 | Surat, India</p>
+            <ul>
+              <li>Developed hotel management system using HTML, CSS, PHP.</li>
+              <li>Built microservices for booking and payments automation.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <img src="./assets/arrow.png" alt="Arrow" class="icon arrow"
+        onclick="location.href='./#projects'" />
+    </section>
+
+    <!-- ===== PROJECTS SECTION ===== -->
+    <section id="projects">
+      <p class="section__text__p1">Browse My Recent</p>
+      <h1 class="title">Projects</h1>
+      <div class="experience-details-container">
+        <div class="about-containers">
+          <div class="details-container color-container">
+            <div class="article-container">
+              <img src="./assets/project-1.png" alt="Bank Dashboard" class="project-img" />
+            </div>
+            <h2 class="experience-sub-title project-title">Power BI Bank Dashboard</h2>
+            <p>The Bank Dashboard visualizes KPIs on deposits, loans, customers, and
+              revenue trends to guide data-driven banking strategies.</p>
+          </div>
+          <div class="details-container color-container">
+            <div class="article-container">
+              <img src="./assets/project-2.png" alt="HRMS" class="project-img" />
+            </div>
+            <h2 class="experience-sub-title project-title">Human Resources Management System</h2>
+            <p>Developed a Java-based HR system with SHA-256 secure authentication and
+              employee financial tracking.</p>
+          </div>
+          <div class="details-container color-container">
+            <div class="article-container">
+              <img src="./assets/project-3.png" alt="Warehouse" class="project-img" />
+            </div>
+            <h2 class="experience-sub-title project-title">Warehouse Inventory Manager</h2>
+            <p>Python-based tool tracking stock levels and automating reorder workflows.</p>
+          </div>
+        </div>
+      </div>
+      <img src="./assets/arrow.png" alt="Arrow" class="icon arrow"
+        onclick="location.href='./#contact'" />
+    </section>
+
+    <!-- ===== CONTACT SECTION ===== -->
+    <section id="contact">
+      <p class="section__text__p1">Get in Touch</p>
+      <h1 class="title">Contact Me</h1>
+      <div class="contact-info-upper-container">
+        <div class="contact-info-container">
+          <img src="./assets/email.png" alt="Email" class="icon contact-icon email-icon" />
+          <p><a href="mailto:gaudanadhruti17@gmail.com">gaudanadhruti17@gmail.com</a></p>
+        </div>
+        <div class="contact-info-container">
+          <img src="./assets/linkedin.png" alt="LinkedIn" class="icon contact-icon" />
+          <p><a href="https://www.linkedin.com/in/dhruti-gaudana-474995360?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3BFpA8VyqXR%2Fqp7WYIDb0k2Q%3D%3D">linkedin.com/in/dhrutigaudana</a></p>
+        </div>
+        <div class="contact-info-container">
+          <img src="./assets/phone.png" alt="Phone" class="icon contact-icon" />
+          <p><a href="tel:+14752090761">+1 (475) 209-0761</a></p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== FOOTER ===== -->
+    <footer>
+      <nav>
+        <div class="nav-links-container">
+          <ul class="nav-links">
+            <li><a href="#about">About</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+      </nav>
+      <p>© 2025 Dhruti Gaudana. All Rights Reserved.</p>
+    </footer>
+
+    <script>
+      /* ===== Toggle Menu for Mobile ===== */
+      function toggleMenu() {
+        const menu = document.querySelector(".menu-links");
+        const icon = document.querySelector(".hamburger-icon");
+        menu.classList.toggle("open");
+        icon.classList.toggle("open");
+      }
+
+      /* ===== Scroll Animation ===== */
+      const sections = document.querySelectorAll("section");
+      const options = { threshold: 0.1 };
+
+      const observer = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.style.animationPlayState = "running";
+            entry.target.style.opacity = "1";
+            observer.unobserve(entry.target);
+          }
+        });
+      }, options);
+
+      sections.forEach(section => {
+        section.style.animationPlayState = "paused";
+        observer.observe(section);
+      });
+    </script>
+  </body>
+</html>
