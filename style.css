@@ -391,12 +391,20 @@ a:hover {
   list-style-type: disc;
   text-align: left;
   margin: 1rem 2rem;
-  line-height: 1.6;
+  line-height: 1.8;
 }
 
 .details-container ul li {
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.8rem;
   color: #333;
+  font-size: 0.95rem;
+}
+
+.date-range {
+  color: #666;
+  font-size: 0.95rem;
+  margin-bottom: 1rem;
+  font-style: italic;
 }
 
 /* ===========================
@@ -407,19 +415,60 @@ a:hover {
   position: relative;
 }
 
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 2rem;
+}
+
 .color-container {
-  background: #f7fbff;
+  position: relative;
+  background: #ffffff;
   border: 1px solid #cde6f5;
   border-radius: 1.5rem;
   box-shadow: 0 6px 12px rgba(0, 119, 182, 0.1);
-  padding: 1rem;
-  text-align: center;
+  padding: 1.5rem;
+  text-align: left;
+  transition: all 0.3s ease;
+}
+
+.color-container:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 24px rgba(0, 119, 182, 0.15);
+}
+
+.domain-tag {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  padding: 0.4rem 1rem;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: white;
+  z-index: 10;
+}
+
+.domain-tag.finance {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+}
+
+.domain-tag.healthcare {
+  background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+}
+
+.domain-tag.retail {
+  background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+}
+
+.domain-tag.supply-chain {
+  background: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%);
 }
 
 .project-img {
   border-radius: 1rem;
   width: 100%;
-  height: 220px;
+  height: 200px;
   object-fit: cover;
   margin-bottom: 1rem;
 }
@@ -427,6 +476,21 @@ a:hover {
 .project-title {
   color: #00334e;
   font-weight: 600;
+  font-size: 1.3rem;
+  margin-bottom: 0.8rem;
+}
+
+.color-container p {
+  color: #555;
+  line-height: 1.6;
+  margin-bottom: 0.8rem;
+  font-size: 0.95rem;
+}
+
+.color-container p strong {
+  color: #0077b6;
+  display: block;
+  margin-bottom: 0.3rem;
 }
 
 .project-btn {

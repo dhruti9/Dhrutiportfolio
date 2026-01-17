@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Dhruti Gaudana | Data Analyst Portfolio</title>
+    <title>Dhruti Gaudana | Data Engineer Portfolio</title>
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="mediaqueries.css" />
     <style>
@@ -153,7 +153,7 @@
       <div class="section__text">
         <p class="section__text__p1">Hello, I'm</p>
         <h1 class="title">Dhruti Gaudana</h1>
-        <p class="section__text__p2">Data Analyst | Data Engineer</p>
+        <p class="section__text__p2">AWS Data Engineer | Cloud Solutions Architect</p>
         <div class="btn-container">
           <button
             class="btn btn-color-2"
@@ -183,28 +183,34 @@
     <div class="about-highlights">
       <div class="highlight-card">
         <h3>Experience</h3>
-        <p>5+ years in Data Analytics & Software Development</p>
+        <p>5+ years in Data Engineering & Cloud Solutions</p>
       </div>
       <div class="highlight-card">
         <h3>Education</h3>
         <p>M.Sc. Cybersecurity & Networks<br>B.Tech Computer Engineering</p>
       </div>
       <div class="highlight-card">
-        <h3>Expertise</h3>
-        <p>SQL | Python | Power BI | AWS | Tableau | ETL Automation | Azure</p>
+        <h3>AWS Services</h3>
+        <p>S3 | Glue | Lambda | Redshift | Athena | EMR | Step Functions | Kinesis</p>
+      </div>
+      <div class="highlight-card">
+        <h3>Data Engineering</h3>
+        <p>Python | Spark | Airflow | Kafka | SQL | ETL Pipelines | Data Lakes</p>
       </div>
     </div>
 
     <div class="about-text">
       <p>
-        I’m a data-driven professional passionate about transforming raw data into 
-        actionable insights. My work bridges technical expertise and business understanding —
-        whether it's optimizing ETL pipelines, building dynamic dashboards, or uncovering trends
-        through predictive analytics.
+        I'm a Data Engineer specializing in building scalable, cloud-native data solutions on AWS.
+        My expertise spans finance, healthcare, retail, and supply chain domains — architecting
+        end-to-end data pipelines that process millions of records daily while maintaining high
+        data quality and performance standards.
       </p>
       <p>
-        I believe data is most powerful when it tells a clear story — one that guides smarter 
-        decisions. I thrive at the intersection of analytics, automation, and innovation.
+        I design robust ETL workflows using AWS Glue and Lambda, implement real-time streaming
+        with Kinesis, optimize data warehouses on Redshift, and build serverless data lakes with
+        S3 and Athena. My focus is on creating automated, cost-effective solutions that transform
+        complex data into actionable business intelligence.
       </p>
     </div>
   </div>
@@ -220,30 +226,33 @@
       <div class="experience-details-container">
         <div class="about-containers">
           <div class="details-container">
-            <h2 class="experience-sub-title">United Health Group | Developer & Analyst</h2>
+            <h2 class="experience-sub-title">United Health Group | AWS Data Engineer</h2>
             <p class="date-range">Sep 2024 - Present | United States</p>
             <ul>
-              <li>Automated Python-based data pipelines, improving data quality by 20%.</li>
-              <li>Developed Tableau dashboards for 300+ stakeholders.</li>
-              <li>Optimized SQL ETL processes to enhance performance.</li>
-              <li>Built ML models to boost marketing ROI by 13%.</li>
+              <li>Architected serverless ETL pipelines using AWS Glue, Lambda, and Step Functions processing 5M+ healthcare records daily.</li>
+              <li>Built real-time data streaming solution with Kinesis and Lambda for patient monitoring systems.</li>
+              <li>Optimized Redshift queries reducing healthcare claims processing time by 40%.</li>
+              <li>Implemented data lake on S3 with Athena for ad-hoc analysis, saving $50K annually.</li>
+              <li>Created automated data quality checks using AWS Glue DataBrew improving accuracy by 25%.</li>
             </ul>
           </div>
           <div class="details-container">
-            <h2 class="experience-sub-title">Brain Byte Infotech | Software Developer</h2>
+            <h2 class="experience-sub-title">Brain Byte Infotech | Data Engineer</h2>
             <p class="date-range">Jun 2019 - Jun 2022 | Surat, India</p>
             <ul>
-              <li>Created REST APIs & web interfaces using Django, JSP, JS.</li>
-              <li>Cut response time by 15% via optimization and debugging.</li>
-              <li>Led migration from REST to GraphQL improving maintainability.</li>
+              <li>Designed AWS EMR-based Spark jobs for large-scale retail transaction processing.</li>
+              <li>Built Python ETL pipelines automating data ingestion from 20+ source systems.</li>
+              <li>Implemented Apache Airflow orchestration for scheduling 100+ daily workflows.</li>
+              <li>Developed REST APIs for data access reducing query response time by 60%.</li>
             </ul>
           </div>
           <div class="details-container">
-            <h2 class="experience-sub-title">Easy Laser Tech | DB Intern</h2>
+            <h2 class="experience-sub-title">Easy Laser Tech | Database Engineer</h2>
             <p class="date-range">Aug 2018 - Mar 2019 | Surat, India</p>
             <ul>
-              <li>Developed hotel management system using HTML, CSS, PHP.</li>
-              <li>Built microservices for booking and payments automation.</li>
+              <li>Designed normalized database schemas for hospitality management system.</li>
+              <li>Built automated ETL scripts for inventory and booking data synchronization.</li>
+              <li>Optimized SQL queries improving system performance by 30%.</li>
             </ul>
           </div>
         </div>
@@ -254,33 +263,71 @@
 
     <!-- ===== PROJECTS SECTION ===== -->
     <section id="projects">
-      <p class="section__text__p1">Browse My Recent</p>
+      <p class="section__text__p1">Browse My AWS Data Engineering</p>
       <h1 class="title">Projects</h1>
       <div class="experience-details-container">
-        <div class="about-containers">
+        <div class="about-containers projects-grid">
+
           <div class="details-container color-container">
+            <div class="domain-tag finance">Finance</div>
             <div class="article-container">
-              <img src="./assets/project-1.png" alt="Bank Dashboard" class="project-img" />
+              <img src="./assets/project-1.png" alt="Finance Data Pipeline" class="project-img" />
             </div>
-            <h2 class="experience-sub-title project-title">Power BI Bank Dashboard</h2>
-            <p>The Bank Dashboard visualizes KPIs on deposits, loans, customers, and
-              revenue trends to guide data-driven banking strategies.</p>
+            <h2 class="experience-sub-title project-title">Real-Time Fraud Detection Pipeline</h2>
+            <p><strong>AWS Stack:</strong> Kinesis Data Streams, Lambda, S3, Redshift, SageMaker, CloudWatch</p>
+            <p>Built serverless real-time fraud detection system processing 50K+ transactions/sec. Used Kinesis for data ingestion, Lambda for real-time scoring, and SageMaker for ML model deployment. Reduced fraud detection time from hours to milliseconds.</p>
           </div>
+
           <div class="details-container color-container">
+            <div class="domain-tag healthcare">Healthcare</div>
             <div class="article-container">
-              <img src="./assets/project-2.png" alt="HRMS" class="project-img" />
+              <img src="./assets/project-2.png" alt="Healthcare Analytics" class="project-img" />
             </div>
-            <h2 class="experience-sub-title project-title">Human Resources Management System</h2>
-            <p>Developed a Java-based HR system with SHA-256 secure authentication and
-              employee financial tracking.</p>
+            <h2 class="experience-sub-title project-title">Patient Data Analytics Platform</h2>
+            <p><strong>AWS Stack:</strong> Glue, S3, Athena, QuickSight, Lake Formation, KMS</p>
+            <p>Designed HIPAA-compliant data lake processing 3M+ patient records. Implemented automated ETL using Glue, enabled SQL analytics with Athena, and built interactive dashboards in QuickSight. Enhanced clinical decision-making with 99.9% data accuracy.</p>
           </div>
+
           <div class="details-container color-container">
+            <div class="domain-tag retail">Retail</div>
             <div class="article-container">
-              <img src="./assets/project-3.png" alt="Warehouse" class="project-img" />
+              <img src="./assets/project-3.png" alt="Retail Analytics" class="project-img" />
             </div>
-            <h2 class="experience-sub-title project-title">Warehouse Inventory Manager</h2>
-            <p>Python-based tool tracking stock levels and automating reorder workflows.</p>
+            <h2 class="experience-sub-title project-title">E-Commerce Data Warehouse</h2>
+            <p><strong>AWS Stack:</strong> Redshift, EMR (Spark), S3, Glue, Lambda, EventBridge</p>
+            <p>Architected scalable data warehouse for multi-channel retail analytics. Used EMR Spark for processing 10TB+ daily transaction data, Redshift for OLAP queries, and automated workflows with EventBridge. Improved query performance by 65%.</p>
           </div>
+
+          <div class="details-container color-container">
+            <div class="domain-tag supply-chain">Supply Chain</div>
+            <div class="article-container">
+              <img src="./assets/project-1.png" alt="Supply Chain Optimization" class="project-img" />
+            </div>
+            <h2 class="experience-sub-title project-title">Supply Chain Visibility Platform</h2>
+            <p><strong>AWS Stack:</strong> IoT Core, Kinesis Firehose, DynamoDB, Lambda, Step Functions</p>
+            <p>Built IoT-enabled supply chain tracking system ingesting real-time sensor data from 5000+ devices. Implemented streaming pipeline with Kinesis Firehose, event-driven processing with Lambda, and orchestrated workflows with Step Functions. Reduced delivery delays by 30%.</p>
+          </div>
+
+          <div class="details-container color-container">
+            <div class="domain-tag finance">Finance</div>
+            <div class="article-container">
+              <img src="./assets/project-2.png" alt="Banking Data Lake" class="project-img" />
+            </div>
+            <h2 class="experience-sub-title project-title">Banking Data Lake & Analytics Hub</h2>
+            <p><strong>AWS Stack:</strong> S3, Glue Catalog, Athena, EMR, Redshift Spectrum, QuickSight</p>
+            <p>Created enterprise data lake consolidating data from 15+ banking systems. Implemented medallion architecture (bronze/silver/gold layers), automated data quality checks with Glue DataBrew, and enabled self-service analytics. Reduced reporting time from weeks to hours.</p>
+          </div>
+
+          <div class="details-container color-container">
+            <div class="domain-tag healthcare">Healthcare</div>
+            <div class="article-container">
+              <img src="./assets/project-3.png" alt="Healthcare Streaming" class="project-img" />
+            </div>
+            <h2 class="experience-sub-title project-title">Real-Time Patient Monitoring System</h2>
+            <p><strong>AWS Stack:</strong> Kinesis Data Analytics, Lambda, DynamoDB, SNS, CloudWatch</p>
+            <p>Developed real-time streaming analytics for ICU patient monitoring. Processed vital signs from 500+ beds, implemented anomaly detection with Kinesis Analytics, triggered alerts via SNS. Enabled proactive intervention reducing critical incidents by 40%.</p>
+          </div>
+
         </div>
       </div>
       <img src="./assets/arrow.png" alt="Arrow" class="icon arrow"
